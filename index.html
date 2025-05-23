@@ -8,12 +8,11 @@
 <meta name="keywords" content="internet ilimitada, IPTV, aplicativo internet, conexão estável, internet para celular, Carvalho Oficial" />
 <meta name="author" content="Carvalho Oficial" />
 <style>
-  /* Seu CSS atual, mantido */
   html, body {
-    margin: 0; padding: 0; height: 100%;
+    margin: 0; padding: 0; min-height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    overflow: hidden;
+    overflow-y: auto; /* Permite rolagem vertical */
     background: url('https://i.imgur.com/Eu2B26u.jpeg') no-repeat center center fixed;
     background-size: cover;
   }
@@ -116,7 +115,7 @@
     box-shadow: 0 0 18px #2d4373;
     transform: scale(1.07);
   }
-  /* Animações mantidas */
+
   @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -133,7 +132,7 @@
     0% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea; }
     100% { text-shadow: 0 0 12px #00fff0, 0 0 22px #00fff0; }
   }
-  /* Estilos player de música */
+  /* Música player styles */
   .music-control {
     position: fixed;
     bottom: 20px;
