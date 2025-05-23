@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Inteligente</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2.5em;
+            animation: slideIn 2s ease-out forwards;
+            opacity: 0;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            animation: fadeIn 3s ease-in forwards;
+            opacity: 0;
+        }
+        .btn-whatsapp {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 30px;
+            background: #25D366;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            animation: popIn 2s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ebe5d;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>📶 Conecte-se de forma inteligente</h1>
+    <p>Aplicativo exclusivo para manter sua internet sempre ativa e estável!</p>
+    <a class="btn-whatsapp" href="https://wa.me/5551920048085" target="_blank">💬 Fale comigo no WhatsApp</a>
+</body>
+</html>
