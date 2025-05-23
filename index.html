@@ -1,72 +1,190 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conexão Inteligente</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        h1 {
-            font-size: 2.5em;
-            animation: slideIn 2s ease-out forwards;
-            opacity: 0;
-        }
-        p {
-            font-size: 1.2em;
-            margin: 20px 0;
-            animation: fadeIn 3s ease-in forwards;
-            opacity: 0;
-        }
-        .btn-whatsapp {
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border: none;
-            border-radius: 30px;
-            background: #25D366;
-            color: white;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            animation: popIn 2s ease-in-out forwards;
-            opacity: 0;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conexão Inteligente</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow: hidden;
+    background: url('https://i.imgur.com/Eu2B26u.jpeg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  img.logo {
+    width: 160px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255 255 255 / 0.3);
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in forwards;
+  }
+  .offer-text {
+    font-size: 1.3em;
+    margin-bottom: 35px;
+    font-weight: 600;
+    text-shadow: 0 0 8px #00ffea;
+    animation: glowText 3s ease-in-out infinite alternate;
+  }
+  h1 {
+    font-size: 2.4em;
+    margin: 0 0 15px 0;
+    animation: slideIn 2s ease-out forwards;
+    opacity: 0;
+  }
+  p {
+    font-size: 1.1em;
+    margin: 0 0 40px 0;
+    animation: fadeIn 3s ease-in forwards;
+    opacity: 0;
+  }
+  .btn-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    animation: popIn 2s ease-in-out forwards;
+    opacity: 0;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .btn-whatsapp, .btn-telegram, .btn-iptv, .btn-facebook {
+    padding: 15px 30px;
+    font-size: 1.15em;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.25s ease;
+    user-select: none;
+  }
+  .btn-whatsapp {
+    background: #25D366;
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.5);
+  }
+  .btn-whatsapp:hover {
+    background: #1ebe5d;
+    box-shadow: 0 0 18px #1ebe5d;
+    transform: scale(1.07);
+  }
+  .btn-telegram {
+    background: #0088cc;
+    box-shadow: 0 6px 12px rgba(0, 136, 204, 0.5);
+  }
+  .btn-telegram:hover {
+    background: #006699;
+    box-shadow: 0 0 18px #006699;
+    transform: scale(1.07);
+  }
+  .btn-iptv {
+    background: #d32f2f;
+    box-shadow: 0 6px 12px rgba(211, 47, 47, 0.6);
+  }
+  .btn-iptv:hover {
+    background: #a82828;
+    box-shadow: 0 0 20px #a82828;
+    transform: scale(1.07);
+  }
+  .btn-facebook {
+    background: #3b5998;
+    box-shadow: 0 6px 12px rgba(59, 89, 152, 0.6);
+  }
+  .btn-facebook:hover {
+    background: #2d4373;
+    box-shadow: 0 0 18px #2d4373;
+    transform: scale(1.07);
+  }
 
-        .btn-whatsapp:hover {
-            background: #1ebe5d;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes popIn {
-            0% { transform: scale(0.5); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-    </style>
+  /* Animations */
+  @keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes glowText {
+    0% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea; }
+    100% { text-shadow: 0 0 12px #00fff0, 0 0 22px #00fff0; }
+  }
+  /* Music player styles */
+  .music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    background: rgba(0,0,0,0.6);
+    border-radius: 50px;
+    padding: 8px 15px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00fff0;
+    transition: background 0.3s ease;
+  }
+  .music-control:hover {
+    background: rgba(0,0,0,0.85);
+  }
+</style>
 </head>
 <body>
-    <h1>📶 Conecte-se de forma inteligente</h1>
-    <p>Aplicativo exclusivo para manter sua internet sempre ativa e estável!</p>
-    <a class="btn-whatsapp" href="https://wa.me/5551920048085" target="_blank">💬 Fale comigo no WhatsApp</a>
+    <div class="content">
+        <img class="logo" src="https://i.imgur.com/gcUPvBC.jpeg" alt="Logo" />
+        <div class="offer-text">🌐 Internet ilimitada e IPTV com qualidade e estabilidade garantidas!</div>
+        <h1>📶 Conecte-se de forma inteligente</h1>
+        <p>Aplicativo exclusivo para manter sua internet sempre ativa e estável!</p>
+        <div class="btn-group-vertical">
+            <a class="btn-whatsapp" href="https://wa.me/5551920048085" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+            <a class="btn-telegram" href="https://t.me/Carvalhooficial" target="_blank" rel="noopener noreferrer">📨 Telegram</a>
+            <a class="btn-iptv" href="https://tvcarvalho.my.canva.site/" target="_blank" rel="noopener noreferrer">📺 CARVALHO - IPTV</a>
+            <a class="btn-facebook" href="https://www.facebook.com/carvalhofilmeseserie" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+        </div>
+    </div>
+
+    <!-- Música de fundo -->
+    <audio id="bg-music" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_3a3fdb9a05.mp3?filename=relaxing-calm-ambient-background-10860.mp3" loop></audio>
+    <div class="music-control" onclick="toggleMusic()" title="Tocar/Pausar música">▶️ Música</div>
+
+<script>
+  const music = document.getElementById('bg-music');
+  const control = document.querySelector('.music-control');
+
+  function toggleMusic() {
+    if(music.paused) {
+      music.play();
+      control.textContent = "⏸️ Pausar música";
+    } else {
+      music.pause();
+      control.textContent = "▶️ Música";
+    }
+  }
+  // Opcional: iniciar música automaticamente ao carregar (descomente a linha abaixo se quiser)
+  // window.onload = () => music.play();
+</script>
 </body>
 </html>
