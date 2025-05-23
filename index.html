@@ -7,34 +7,16 @@
 <meta name="description" content="Oferecemos internet ilimitada estável e IPTV de qualidade. App exclusivo para manter sua conexão sempre ativa. Contato via WhatsApp, Telegram, Facebook." />
 <meta name="keywords" content="internet ilimitada, IPTV, aplicativo internet, conexão estável, internet para celular, Carvalho Oficial" />
 <meta name="author" content="Carvalho Oficial" />
-
-<!-- Open Graph para redes sociais -->
-<meta property="og:title" content="Internet Ilimitada e IPTV – Conexão Inteligente | Carvalho Oficial" />
-<meta property="og:description" content="Internet ilimitada estável e IPTV de qualidade. App exclusivo para manter sua conexão sempre ativa." />
-<meta property="og:image" content="https://i.imgur.com/gcUPvBC.jpeg" />
-<meta property="og:type" content="website" />
-
-<!-- Favicon simples -->
-<link rel="icon" href="https://i.imgur.com/gcUPvBC.jpeg" type="image/png" />
-
 <style>
-  /* Reset básico */
   html, body {
-    margin: 0; padding: 0; height: 100%;
+    margin: 0; padding: 0; min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    overflow-y: auto; /* Permite rolagem vertical */
     background: url('https://i.imgur.com/Eu2B26u.jpeg') no-repeat center center fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
   }
-  /* Imagem menor para dispositivos móveis */
-  @media (max-width: 600px) {
-    body {
-      background: url('https://i.imgur.com/Eu2B26u_small.jpeg') no-repeat center center fixed;
-      background-size: cover;
-    }
-  }
-
   body::before {
     content: "";
     position: fixed;
@@ -42,13 +24,14 @@
     background: rgba(0, 0, 0, 0.6);
     z-index: 0;
   }
-  .content {
+  main.content {
     position: relative;
     z-index: 1;
     max-width: 420px;
-    margin: auto;
+    margin: 40px auto 0 auto;
     padding: 20px;
     text-align: center;
+    flex-grow: 1;
   }
   img.logo {
     width: 160px;
@@ -58,44 +41,23 @@
     animation: fadeIn 2s ease-in forwards;
   }
   .offer-text {
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-bottom: 35px;
     font-weight: 600;
     text-shadow: 0 0 8px #00ffea;
     animation: glowText 3s ease-in-out infinite alternate;
   }
   h1 {
-    font-size: 2.6em;
+    font-size: 2.4em;
     margin: 0 0 15px 0;
     animation: slideIn 2s ease-out forwards;
     opacity: 0;
   }
   p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 0 0 40px 0;
     animation: fadeIn 3s ease-in forwards;
     opacity: 0;
-  }
-  /* Ajuste para dispositivos móveis - texto maior */
-  @media (max-width: 600px) {
-    .offer-text {
-      font-size: 1.6em;
-    }
-    h1 {
-      font-size: 2em;
-    }
-    p {
-      font-size: 1.15em;
-      margin-bottom: 30px;
-    }
-    .btn-group-vertical {
-      max-width: 90vw;
-      gap: 28px;
-    }
-    .btn-whatsapp, .btn-telegram, .btn-iptv, .btn-facebook {
-      padding: 18px 35px;
-      font-size: 1.25em;
-    }
   }
   .btn-group-vertical {
     display: flex;
@@ -123,57 +85,39 @@
     background: #25D366;
     box-shadow: 0 6px 12px rgba(37, 211, 102, 0.5);
   }
-  .btn-whatsapp:hover, .btn-whatsapp:focus {
+  .btn-whatsapp:hover {
     background: #1ebe5d;
-    box-shadow: 0 0 20px #1ebe5d;
+    box-shadow: 0 0 18px #1ebe5d;
     transform: scale(1.07);
-    outline: none;
   }
   .btn-telegram {
     background: #0088cc;
     box-shadow: 0 6px 12px rgba(0, 136, 204, 0.5);
   }
-  .btn-telegram:hover, .btn-telegram:focus {
+  .btn-telegram:hover {
     background: #006699;
-    box-shadow: 0 0 20px #006699;
+    box-shadow: 0 0 18px #006699;
     transform: scale(1.07);
-    outline: none;
   }
   .btn-iptv {
     background: #d32f2f;
     box-shadow: 0 6px 12px rgba(211, 47, 47, 0.6);
   }
-  .btn-iptv:hover, .btn-iptv:focus {
+  .btn-iptv:hover {
     background: #a82828;
-    box-shadow: 0 0 22px #a82828;
+    box-shadow: 0 0 20px #a82828;
     transform: scale(1.07);
-    outline: none;
   }
   .btn-facebook {
     background: #3b5998;
     box-shadow: 0 6px 12px rgba(59, 89, 152, 0.6);
   }
-  .btn-facebook:hover, .btn-facebook:focus {
+  .btn-facebook:hover {
     background: #2d4373;
-    box-shadow: 0 0 20px #2d4373;
+    box-shadow: 0 0 18px #2d4373;
     transform: scale(1.07);
-    outline: none;
   }
-  /* Foco visível para acessibilidade */
-  a:focus, button:focus, .music-control:focus {
-    outline: 3px solid #00fff0;
-    outline-offset: 2px;
-  }
-  /* Pequena animação de brilho contínuo nos botões */
-  .btn-whatsapp, .btn-telegram, .btn-iptv, .btn-facebook {
-    animation: subtleGlow 4s ease-in-out infinite alternate;
-  }
-  @keyframes subtleGlow {
-    0% { box-shadow: 0 6px 12px rgba(0,0,0,0.3); }
-    100% { box-shadow: 0 0 15px rgba(0,255,255,0.6); }
-  }
-
-  /* Animações existentes */
+  /* Animações */
   @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -190,48 +134,32 @@
     0% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea; }
     100% { text-shadow: 0 0 12px #00fff0, 0 0 22px #00fff0; }
   }
-
-  /* Estilos player de música */
-  .music-control {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10;
-    background: rgba(0,0,0,0.6);
-    border-radius: 50px;
-    padding: 8px 15px;
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
-    user-select: none;
-    cursor: pointer;
-    box-shadow: 0 0 10px #00fff0;
-    transition: background 0.3s ease;
-  }
-  .music-control:hover, .music-control:focus {
-    background: rgba(0,0,0,0.85);
-    outline: none;
-  }
-
-  /* Rodapé simples */
   footer {
-    position: relative;
-    z-index: 1;
-    max-width: 420px;
-    margin: 30px auto 20px;
-    padding: 15px 20px;
-    color: #bbb;
-    font-size: 0.9em;
+    background: rgba(0,0,0,0.75);
+    padding: 12px 20px;
     text-align: center;
-    user-select: none;
+    font-size: 0.9em;
+    box-shadow: inset 0 1px 3px rgba(255 255 255 / 0.1);
+    z-index: 1;
   }
   footer a {
-    color: #00fff0;
+    color: #00ffea;
     text-decoration: none;
+    margin: 0 12px;
+    font-weight: 600;
   }
-  footer a:hover, footer a:focus {
+  footer a:hover,
+  footer a:focus {
     text-decoration: underline;
-    outline: none;
+  }
+  @media (max-width: 480px) {
+    main.content {
+      margin: 20px 10px 0 10px;
+    }
+    .btn-group-vertical {
+      max-width: 100%;
+      padding: 0 10px;
+    }
   }
 </style>
 </head>
@@ -243,37 +171,18 @@
     <p>Aplicativo exclusivo para manter sua internet sempre ativa e estável!</p>
     <nav aria-label="Links de contato e serviços">
       <div class="btn-group-vertical">
-          <a class="btn-whatsapp" href="https://wa.me/5551920048085" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato" tabindex="0">💬 WhatsApp</a>
-          <a class="btn-telegram" href="https://t.me/Carvalhooficial" target="_blank" rel="noopener noreferrer" aria-label="Abrir Telegram para contato" tabindex="0">📨 Telegram</a>
-          <a class="btn-iptv" href="https://tvcarvalho.my.canva.site/" target="_blank" rel="noopener noreferrer" aria-label="Acessar CARVALHO - IPTV" tabindex="0">📺 CARVALHO - IPTV</a>
-          <a class="btn-facebook" href="https://www.facebook.com/carvalhofilmeseserie" target="_blank" rel="noopener noreferrer" aria-label="Visitar página do Facebook" tabindex="0">📘 Facebook</a>
+        <a class="btn-whatsapp" href="https://wa.me/5551920048085" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato">💬 WhatsApp</a>
+        <a class="btn-telegram" href="https://t.me/Carvalhooficial" target="_blank" rel="noopener noreferrer" aria-label="Abrir Telegram para contato">📨 Telegram</a>
+        <a class="btn-iptv" href="https://tvcarvalho.my.canva.site/" target="_blank" rel="noopener noreferrer" aria-label="Acessar CARVALHO - IPTV">📺 CARVALHO - IPTV</a>
+        <a class="btn-facebook" href="https://www.facebook.com/carvalhofilmeseserie" target="_blank" rel="noopener noreferrer" aria-label="Visitar página do Facebook">📘 Facebook</a>
       </div>
     </nav>
   </main>
-
-  <!-- Música de fundo -->
-  <audio id="bg-music" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_3a3fdb9a05.mp3?filename=relaxing-calm-ambient-background-10860.mp3" loop></audio>
-  <div class="music-control" onclick="toggleMusic()" title="Tocar/Pausar música" role="button" aria-pressed="false" tabindex="0" onkeydown="if(event.key==='Enter' || event.key===' ') toggleMusic();">▶️ Música</div>
-
   <footer>
-    Contato: <a href="mailto:contato@carvalhooficial.com.br">contato@carvalhooficial.com.br</a> | Telefone: (55) 51 9200-48085
+    Contato:
+    <a href="https://wa.me/5551920048085" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a> |
+    <a href="https://t.me/Carvalhooficial" target="_blank" rel="noopener noreferrer" aria-label="Telegram">Telegram</a> |
+    <a href="https://www.facebook.com/carvalhofilmeseserie" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
   </footer>
-
-<script>
-  const music = document.getElementById('bg-music');
-  const control = document.querySelector('.music-control');
-
-  function toggleMusic() {
-    if(music.paused) {
-      music.play();
-      control.textContent = "⏸️ Pausar música";
-      control.setAttribute('aria-pressed', 'true');
-    } else {
-      music.pause();
-      control.textContent = "▶️ Música";
-      control.setAttribute('aria-pressed', 'false');
-    }
-  }
-</script>
 </body>
 </html>
