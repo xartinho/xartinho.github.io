@@ -3,13 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Conexão Inteligente</title>
+<title>Internet Ilimitada e IPTV – Conexão Inteligente | Carvalho Oficial</title>
+<meta name="description" content="Oferecemos internet ilimitada estável e IPTV de qualidade. App exclusivo para manter sua conexão sempre ativa. Contato via WhatsApp, Telegram, Facebook." />
+<meta name="keywords" content="internet ilimitada, IPTV, aplicativo internet, conexão estável, internet para celular, Carvalho Oficial" />
+<meta name="author" content="Carvalho Oficial" />
 <style>
+  /* Seu CSS atual, mantido */
   html, body {
     margin: 0; padding: 0; height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    /* overflow: hidden; REMOVIDO PARA PERMITIR ROLAGEM */
+    overflow: hidden;
     background: url('https://i.imgur.com/Eu2B26u.jpeg') no-repeat center center fixed;
     background-size: cover;
   }
@@ -112,8 +116,7 @@
     box-shadow: 0 0 18px #2d4373;
     transform: scale(1.07);
   }
-
-  /* Animations */
+  /* Animações mantidas */
   @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -130,7 +133,7 @@
     0% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea; }
     100% { text-shadow: 0 0 12px #00fff0, 0 0 22px #00fff0; }
   }
-  /* Music player styles */
+  /* Estilos player de música */
   .music-control {
     position: fixed;
     bottom: 20px;
@@ -153,22 +156,24 @@
 </style>
 </head>
 <body>
-    <div class="content">
-        <img class="logo" src="https://i.imgur.com/gcUPvBC.jpeg" alt="Logo" />
-        <div class="offer-text">🌐 Internet ilimitada e IPTV com qualidade e estabilidade garantidas!</div>
-        <h1>📶 Conecte-se de forma inteligente</h1>
-        <p>Aplicativo exclusivo para manter sua internet sempre ativa e estável!</p>
-        <div class="btn-group-vertical">
-            <a class="btn-whatsapp" href="https://wa.me/5551920048085" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
-            <a class="btn-telegram" href="https://t.me/Carvalhooficial" target="_blank" rel="noopener noreferrer">📨 Telegram</a>
-            <a class="btn-iptv" href="https://tvcarvalho.my.canva.site/" target="_blank" rel="noopener noreferrer">📺 CARVALHO - IPTV</a>
-            <a class="btn-facebook" href="https://www.facebook.com/carvalhofilmeseserie" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
-        </div>
-    </div>
+  <main class="content" role="main">
+    <img class="logo" src="https://i.imgur.com/gcUPvBC.jpeg" alt="Logo Carvalho Oficial" />
+    <div class="offer-text" aria-label="Oferta principal">🌐 Internet ilimitada e IPTV com qualidade e estabilidade garantidas!</div>
+    <h1>📶 Conecte-se de forma inteligente</h1>
+    <p>Aplicativo exclusivo para manter sua internet sempre ativa e estável!</p>
+    <nav aria-label="Links de contato e serviços">
+      <div class="btn-group-vertical">
+          <a class="btn-whatsapp" href="https://wa.me/5551920048085" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp para contato">💬 WhatsApp</a>
+          <a class="btn-telegram" href="https://t.me/Carvalhooficial" target="_blank" rel="noopener noreferrer" aria-label="Abrir Telegram para contato">📨 Telegram</a>
+          <a class="btn-iptv" href="https://tvcarvalho.my.canva.site/" target="_blank" rel="noopener noreferrer" aria-label="Acessar CARVALHO - IPTV">📺 CARVALHO - IPTV</a>
+          <a class="btn-facebook" href="https://www.facebook.com/carvalhofilmeseserie" target="_blank" rel="noopener noreferrer" aria-label="Visitar página do Facebook">📘 Facebook</a>
+      </div>
+    </nav>
+  </main>
 
-    <!-- Música de fundo -->
-    <audio id="bg-music" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_3a3fdb9a05.mp3?filename=relaxing-calm-ambient-background-10860.mp3" loop></audio>
-    <div class="music-control" onclick="toggleMusic()" title="Tocar/Pausar música">▶️ Música</div>
+  <!-- Música de fundo -->
+  <audio id="bg-music" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_3a3fdb9a05.mp3?filename=relaxing-calm-ambient-background-10860.mp3" loop></audio>
+  <div class="music-control" onclick="toggleMusic()" title="Tocar/Pausar música" role="button" aria-pressed="false">▶️ Música</div>
 
 <script>
   const music = document.getElementById('bg-music');
@@ -178,9 +183,11 @@
     if(music.paused) {
       music.play();
       control.textContent = "⏸️ Pausar música";
+      control.setAttribute('aria-pressed', 'true');
     } else {
       music.pause();
       control.textContent = "▶️ Música";
+      control.setAttribute('aria-pressed', 'false');
     }
   }
 </script>
