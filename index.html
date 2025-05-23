@@ -7,7 +7,9 @@
 <meta name="description" content="Oferecemos internet ilimitada estável e IPTV de qualidade. App exclusivo para manter sua conexão sempre ativa. Contato via WhatsApp, Telegram, Facebook." />
 <meta name="keywords" content="internet ilimitada, IPTV, aplicativo internet, conexão estável, internet para celular, Carvalho Oficial" />
 <meta name="author" content="Carvalho Oficial" />
+
 <style>
+  /* Reset básico e fonte */
   html, body {
     margin: 0; padding: 0; min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,6 +19,8 @@
     display: flex;
     flex-direction: column;
   }
+
+  /* Camada escura sobre o background */
   body::before {
     content: "";
     position: fixed;
@@ -24,6 +28,8 @@
     background: rgba(0, 0, 0, 0.6);
     z-index: 0;
   }
+
+  /* Container principal do conteúdo */
   main.content {
     position: relative;
     z-index: 1;
@@ -33,6 +39,8 @@
     text-align: center;
     flex-grow: 1;
   }
+
+  /* Logo estilizada */
   img.logo {
     width: 160px;
     border-radius: 15px;
@@ -40,6 +48,8 @@
     margin-bottom: 15px;
     animation: fadeIn 2s ease-in forwards;
   }
+
+  /* Texto de oferta com efeito de brilho */
   .offer-text {
     font-size: 1.3em;
     margin-bottom: 35px;
@@ -47,18 +57,24 @@
     text-shadow: 0 0 8px #00ffea;
     animation: glowText 3s ease-in-out infinite alternate;
   }
+
+  /* Título principal */
   h1 {
     font-size: 2.4em;
     margin: 0 0 15px 0;
     animation: slideIn 2s ease-out forwards;
     opacity: 0;
   }
+
+  /* Parágrafo descritivo */
   p {
     font-size: 1.1em;
     margin: 0 0 40px 0;
     animation: fadeIn 3s ease-in forwards;
     opacity: 0;
   }
+
+  /* Botões verticalizados */
   .btn-group-vertical {
     display: flex;
     flex-direction: column;
@@ -68,6 +84,8 @@
     max-width: 320px;
     margin: 0 auto;
   }
+
+  /* Botões estilo */
   .btn-whatsapp, .btn-telegram, .btn-iptv, .btn-facebook {
     padding: 15px 30px;
     font-size: 1.15em;
@@ -81,6 +99,8 @@
     transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.25s ease;
     user-select: none;
   }
+
+  /* Estilos específicos dos botões e hover */
   .btn-whatsapp {
     background: #25D366;
     box-shadow: 0 6px 12px rgba(37, 211, 102, 0.5);
@@ -90,6 +110,7 @@
     box-shadow: 0 0 18px #1ebe5d;
     transform: scale(1.07);
   }
+
   .btn-telegram {
     background: #0088cc;
     box-shadow: 0 6px 12px rgba(0, 136, 204, 0.5);
@@ -99,6 +120,7 @@
     box-shadow: 0 0 18px #006699;
     transform: scale(1.07);
   }
+
   .btn-iptv {
     background: #d32f2f;
     box-shadow: 0 6px 12px rgba(211, 47, 47, 0.6);
@@ -108,6 +130,7 @@
     box-shadow: 0 0 20px #a82828;
     transform: scale(1.07);
   }
+
   .btn-facebook {
     background: #3b5998;
     box-shadow: 0 6px 12px rgba(59, 89, 152, 0.6);
@@ -117,6 +140,7 @@
     box-shadow: 0 0 18px #2d4373;
     transform: scale(1.07);
   }
+
   /* Animações */
   @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
@@ -134,6 +158,8 @@
     0% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea; }
     100% { text-shadow: 0 0 12px #00fff0, 0 0 22px #00fff0; }
   }
+
+  /* Rodapé */
   footer {
     background: rgba(0,0,0,0.75);
     padding: 12px 20px;
@@ -152,6 +178,8 @@
   footer a:focus {
     text-decoration: underline;
   }
+
+  /* Responsividade para telas pequenas */
   @media (max-width: 480px) {
     main.content {
       margin: 20px 10px 0 10px;
@@ -178,6 +206,7 @@
       </div>
     </nav>
   </main>
+
   <footer>
     Contato:
     <a href="https://wa.me/5551920048085" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a> |
@@ -187,17 +216,16 @@
 
   <!--Start of Tawk.to Script-->
   <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/6830e5aa980dfb190f09cf13/1irvg28pv';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/6830e5aa980dfb190f09cf13/1irvg28pv';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
   </script>
   <!--End of Tawk.to Script-->
-
 </body>
 </html>
